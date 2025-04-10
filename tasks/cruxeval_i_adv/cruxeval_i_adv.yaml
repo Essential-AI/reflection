@@ -1,0 +1,27 @@
+task: cruxeval_i_adv
+dataset_path: EssentialAI/cruxeval_i_adv
+output_type: generate_until
+test_split: test
+doc_to_text: !function utils.doc_to_text
+doc_to_target: !function utils.doc_to_target
+process_results: !function utils.process_results
+should_decontaminate: true
+metric_list:
+  - metric: pass@1
+    aggregation: mean
+    higher_is_better: true
+generation_kwargs:
+  until:
+    - "[PYTHON]"
+  max_gen_toks: 800
+  do_sample: true
+  temperature: 0.2
+  top_p: 0.9
+filter_list:
+  - name: "create_test"
+    filter:
+      - function: "custom"
+        filter_fn: !function utils.build_predictions
+num_fewshot: 0
+metadata:
+  version: 1.0
