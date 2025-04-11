@@ -25,7 +25,7 @@ tasks.
 As detailed in our paper, we modified existing datasets to create adversarial datasets that can elicit reflection behavior from LLMs. Our modifications involved prompting LLMs and the `prompts/` directory includes the specific instructions for each dataset.
 
 ## Results
-Our experiments produced a substantial volume of results and samples JSON files. These are available via Essential AI's [Hugging Face hub](https://huggingface.co/EssentialAI). Additionally, in `results/`  we share csv files that collate our results, along with the plots from our paper and the code used to create them. 
+Our experiments produced a substantial volume of results and samples JSON files. These are available via Essential AI's [Hugging Face hub](https://huggingface.co/collections/EssentialAI/rethinking-reflection-in-pre-training-67f69f2374a7d50cc5c325ea). Additionally, in `results/`  we share csv files that collate our results, along with the plots from our paper and the code used to create them. 
 
 ## Tasks
 Our experiments utilized the EleutherAI [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness). We created custom tasks, which are available in `tasks/`: 
